@@ -24,7 +24,7 @@ public class VenteService {
         return venteRepo.findVenteByAnnee(annee).orElseThrow(() -> new UserNotFoundException("Pas de vente sur cette année"));
     }
 
-    public List<vente> findProductSum(Long productid) {
-        return venteRepo
-    }
+//    public List<vente> findProductSum(Long productid) {
+//        return venteRepo;
+//    }
 }
