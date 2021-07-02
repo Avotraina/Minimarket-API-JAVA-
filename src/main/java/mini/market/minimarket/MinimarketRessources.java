@@ -17,6 +17,7 @@ public class MinimarketRessources {
         this.productService = productService;
     }
 
+    @CrossOrigin(exposedHeaders="Access-Control-Allow-Origin")
     @GetMapping("/allProduct")
     public ResponseEntity<List<minimarket>> getAllProduct() {
         List<minimarket> products = productService.findAllProducts();

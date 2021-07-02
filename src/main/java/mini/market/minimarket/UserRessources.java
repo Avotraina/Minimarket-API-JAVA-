@@ -38,8 +38,8 @@ public class UserRessources {
         return new ResponseEntity<>(newUser, HttpStatus.OK);
     }
 
-    @GetMapping("/findName/{username}")
-    public ResponseEntity<List<user>> getUserByName(@PathVariable("username") String username) {
+    @GetMapping("/findName")
+    public ResponseEntity<List<user>> getUserByName(@RequestHeader String username) {
         List<user> users = userService.findUserByName(username);
         return new ResponseEntity<List<user>>(users, HttpStatus.OK);
     }
