@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
+@CrossOrigin(exposedHeaders="Access-Control-Allow-Origin")
 @RequestMapping("/vente")
 public class VenteRessources {
     private final VenteService venteService;

@@ -8,7 +8,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+
 @RestController
+@CrossOrigin(exposedHeaders="Access-Control-Allow-Origin")
 @RequestMapping("/minimarket")
 public class MinimarketRessources {
     private final MinimarketService productService;
@@ -17,7 +19,7 @@ public class MinimarketRessources {
         this.productService = productService;
     }
 
-    @CrossOrigin(exposedHeaders="Access-Control-Allow-Origin")
+//    @CrossOrigin(exposedHeaders="Access-Control-Allow-Origin")
     @GetMapping("/allProduct")
     public ResponseEntity<List<minimarket>> getAllProduct() {
         List<minimarket> products = productService.findAllProducts();

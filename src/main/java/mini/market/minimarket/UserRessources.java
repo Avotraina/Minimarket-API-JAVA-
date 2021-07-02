@@ -13,6 +13,7 @@ import java.sql.Array;
 import java.util.List;
 
 @RestController
+@CrossOrigin(exposedHeaders="Access-Control-Allow-Origin")
 @RequestMapping("/user")
 public class UserRessources {
     private final UserService userService;
